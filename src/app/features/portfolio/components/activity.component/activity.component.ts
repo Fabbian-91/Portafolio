@@ -1,26 +1,17 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
+import { LucideAngularModule } from 'lucide-angular';
 import { Project } from '../../../../shared/models/project.model';
-
-declare const lucide: {
-  createIcons: () => void;
-};
-
 
 @Component({
   selector: 'app-activity',
-  imports: [],
+  standalone: true,
+  imports: [
+    LucideAngularModule
+  ],
   templateUrl: './activity.component.html',
   styleUrl: './activity.component.css',
 })
-export class ActivityComponent implements AfterViewInit {
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
-    }, 100);
-  }
-
+export class ActivityComponent {
   projects: Project[] = [
     {
       title: 'Proyecto 1',

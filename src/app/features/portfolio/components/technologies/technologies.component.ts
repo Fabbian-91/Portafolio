@@ -1,38 +1,22 @@
-import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { LucideAngularModule } from 'lucide-angular';
 import { Technology } from '../../../../shared/models/technology.model';
-
-declare const lucide: {
-  createIcons: () => void;
-};
 
 @Component({
   selector: 'app-technologies',
   standalone: true,
+  imports: [
+    LucideAngularModule
+  ],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class TechnologiesComponent implements AfterViewInit {
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
-    }, 100);
-  }
+export class TechnologiesComponent {
   technologies: Technology[] = [
-    {
-      title: 'Frontend'
-    },
-    {
-      title: 'Backend'
-    },
-    {
-      title: 'Bases de datos'
-    },
-    {
-      title: 'Herramientas'
-    }
-
+    { title: 'Frontend' },
+    { title: 'Backend' },
+    { title: 'Bases de datos' },
+    { title: 'Herramientas' }
   ];
 }

@@ -1,9 +1,10 @@
-<section id="tecnologia"
-  class="hero-section w-full min-h-[200px] flex flex-col items-start justify-center px-6 lg:px-20 pt-2 pb-4 gap-4 text-left">
-
+<section
+  id="tecnologia"
+  class="hero-section w-full min-h-[200px] flex flex-col items-start justify-center px-6 lg:px-20 pt-2 pb-4 gap-4 text-left"
+>
   <div class="w-full">
     <h1 class="text-2xl md:text-2xl lg:text-3xl font-bold flex items-center gap-3 mb-5 ml-3">
-      <i data-lucide="brain-circuit" class="w-7 h-7 text-blue-500"></i>
+      <lucide-icon name="brain-circuit" class="w-7 h-7 text-blue-500"></lucide-icon>
       Tecnologías
     </h1>
 
@@ -13,145 +14,145 @@
 
     <div class="w-full flex flex-col md:flex-row flex-wrap gap-5 justify-center">
       @for (technology of technologies; track technology.title) {
+        <div class="card w-100 bg-[#0e1c29] border border-[#1b2b3a] card-xl shadow-sm">
+          <div class="card-body flex flex-col gap-5">
+            @switch (technology.title) {
+              @case ('Frontend') {
+                <div class="flex items-center gap-2">
+                  <lucide-icon name="code-xml" class="w-6 h-6 text-blue-500"></lucide-icon>
+                  <h2 class="card-title m-0">{{ technology.title }}</h2>
+                </div>
 
-      <div class="card w-100 bg-[#0e1c29] border border-[#1b2b3a] card-xl shadow-sm">
-        <div class="card-body flex flex-col gap-5">
+                <div class="flex flex-row flex-wrap gap-5">
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:html5" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>HTML5</span>
+                  </div>
 
-          @switch (technology.title) {
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:css3" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>CSS3</span>
+                  </div>
 
-          @case ('Frontend') {
-          <div class="flex items-center gap-2">
-            <i data-lucide="code-xml" class="w-6 h-6 text-blue-500"></i>
-            <h2 class="card-title m-0">{{ technology.title }}</h2>
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:javascript" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>JavaScript</span>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:typescript" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>TypeScript</span>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:angular" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>Angular</span>
+                  </div>
+                </div>
+              }
+
+              @case ('Backend') {
+                <div class="flex items-center gap-2">
+                  <lucide-icon name="braces" class="w-6 h-6 text-green-500"></lucide-icon>
+                  <h2 class="card-title m-0">{{ technology.title }}</h2>
+                </div>
+
+                <div class="flex flex-row flex-wrap gap-5">
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:java" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>Java</span>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="simple-icons:express" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>Express.js</span>
+                  </div>
+                </div>
+              }
+
+              @case ('Bases de datos') {
+                <div class="flex items-center gap-2">
+                  <lucide-icon name="database" class="w-6 h-6 text-purple-500"></lucide-icon>
+                  <h2 class="card-title m-0">{{ technology.title }}</h2>
+                </div>
+
+                <div class="flex flex-row flex-wrap gap-5">
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:mysql" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>MySQL</span>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:microsoftsqlserver" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>SQL Server</span>
+                  </div>
+                </div>
+              }
+
+              @case ('Herramientas') {
+                <div class="flex items-center gap-2">
+                  <lucide-icon name="wrench" class="w-6 h-6 text-yellow-500"></lucide-icon>
+                  <h2 class="card-title m-0">{{ technology.title }}</h2>
+                </div>
+
+                <div class="flex flex-row flex-wrap gap-5">
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:git" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>Git</span>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:github" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>GitHub</span>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:docker" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>Docker</span>
+                  </div>
+
+                  <div class="tech-item">
+                    <div class="tech-icon">
+                      <iconify-icon icon="devicon:postman" width="42" height="42"></iconify-icon>
+                    </div>
+                    <span>Postman</span>
+                  </div>
+                </div>
+              }
+            }
           </div>
-
-          <div class="flex flex-row flex-wrap gap-5">
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:html5" width="42" height="42"></iconify-icon>
-              </div>
-              <span>HTML5</span>
-            </div>
-
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:css3" width="42" height="42"></iconify-icon>
-              </div>
-              <span>CSS3</span>
-            </div>
-
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:javascript" width="42" height="42"></iconify-icon>
-              </div>
-              <span>JavaScript</span>
-            </div>
-
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:typescript" width="42" height="42"></iconify-icon>
-              </div>
-              <span>TypeScript</span>
-            </div>
-
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:angular" width="42" height="42"></iconify-icon>
-              </div>
-              <span>Angular</span>
-            </div>
-          </div>
-          }
-
-          @case ('Backend') {
-          <div class="flex items-center gap-2">
-            <i data-lucide="braces" class="w-6 h-6 text-green-500"></i>
-            <h2 class="card-title m-0">{{ technology.title }}</h2>
-          </div>
-
-          <div class="flex flex-row flex-wrap gap-5">
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:java" width="42" height="42"></iconify-icon>
-              </div>
-              <span>Java</span>
-            </div>
-
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="simple-icons:express" width="42" height="42"></iconify-icon>
-              </div>
-              <span>Express.js</span>
-            </div>
-          </div>
-          }
-          @case ('Bases de datos') {
-          <div class="flex items-center gap-2">
-            <i data-lucide="database" class="w-6 h-6 text-purple-500"></i>
-            <h2 class="card-title m-0">{{ technology.title }}</h2>
-          </div>
-
-          <div class="flex flex-row flex-wrap gap-5">
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:mysql" width="42" height="42"></iconify-icon>
-              </div>
-              <span>MySQL</span>
-            </div>
-
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:microsoftsqlserver" width="42" height="42"></iconify-icon>
-              </div>
-              <span>SQL Server</span>
-            </div>
-          </div>
-          }
-          @case ('Herramientas') {
-          <div class="flex items-center gap-2">
-            <i data-lucide="wrench" class="w-6 h-6 text-yellow-500"></i>
-            <h2 class="card-title m-0">{{ technology.title }}</h2>
-          </div>
-
-          <div class="flex flex-row flex-wrap gap-5">
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:git" width="42" height="42"></iconify-icon>
-              </div>
-              <span>Git</span>
-            </div>
-
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:github" width="42" height="42"></iconify-icon>
-              </div>
-              <span>GitHub</span>
-            </div>
-
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:docker" width="42" height="42"></iconify-icon>
-              </div>
-              <span>Docker</span>
-            </div>
-
-            <div class="tech-item">
-              <div class="tech-icon">
-                <iconify-icon icon="devicon:postman" width="42" height="42"></iconify-icon>
-              </div>
-              <span>Postman</span>
-            </div>
-          </div>
-          }}
         </div>
-      </div>
       }
     </div>
+
     <div class="w-full flex flex-col md:flex-row flex-wrap gap-5 justify-start">
       <div class="card w-full bg-[#0e1c29] border border-[#1b2b3a] card-xl shadow-sm mt-9 ml-2 p-5">
-
         <div class="flex items-center gap-2 mb-5">
-          <i data-lucide="lightbulb" class="w-6 h-6 text-red-300"></i>
+          <lucide-icon name="lightbulb" class="w-6 h-6 text-red-300"></lucide-icon>
           <h2 class="card-title m-0">Conceptos clave</h2>
         </div>
 
@@ -188,7 +189,6 @@
             <span>Deploy</span>
           </div>
         </div>
-
       </div>
     </div>
   </div>

@@ -1,12 +1,47 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
-import { routes } from './app.routes';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import {
+  LucideAngularModule,
+  BrainCircuit,
+  CodeXml,
+  Braces,
+  Database,
+  Wrench,
+  Lightbulb,
+  Star,
+  Trophy,
+  CircleDot,
+  ExternalLink,
+  ArrowDownToLine,
+  Github,
+  CircleFadingArrowUp,
+  CircleUserRound,
+  UserRound,
+  Menu,
+  ShieldCheck
+} from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideRouter(routes), provideClientHydration(withEventReplay())
+    importProvidersFrom(
+      LucideAngularModule.pick({
+        BrainCircuit,
+        CodeXml,
+        Braces,
+        Database,
+        Wrench,
+        Lightbulb,
+        Star,
+        Trophy,
+        CircleDot,
+        ExternalLink,
+        ArrowDownToLine,
+        Github,
+        CircleFadingArrowUp,
+        CircleUserRound,
+        UserRound,
+        Menu,
+        ShieldCheck
+      })
+    )
   ]
 };

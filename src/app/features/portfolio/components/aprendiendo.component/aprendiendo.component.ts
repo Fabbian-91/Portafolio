@@ -1,22 +1,13 @@
-import { AfterViewInit, Component } from '@angular/core';
-
-declare const lucide: {
-  createIcons: () => void;
-};
+import { Component } from '@angular/core';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-aprendiendo',
   standalone: true,
-  imports: [],
+  imports: [
+    LucideAngularModule
+  ],
   templateUrl: './aprendiendo.component.html',
   styleUrl: './aprendiendo.component.css',
 })
-export class AprendiendoComponent implements AfterViewInit {
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
-    }, 100);
-  }
-}
+export class AprendiendoComponent {}

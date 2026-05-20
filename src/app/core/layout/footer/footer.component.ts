@@ -1,21 +1,14 @@
-import { AfterViewInit, Component } from '@angular/core';
-
-declare const lucide: {
-  createIcons: () => void;
-};
+import { Component,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
+  imports: [
+    LucideAngularModule
+  ],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrl: './footer.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class FooterComponent implements AfterViewInit{
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
-    }, 100);
-  }
-}
+export class FooterComponent {}
