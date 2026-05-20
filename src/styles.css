@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-primario: #06121d;
+  --color-secundario: #030b14;
+  --tipografia-principal: "Inter", sans-serif;
+  --color-letra-azul: #1557b2;
+  --color-terciario:#0e1c29;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--tipografia-principal);
+  background-color: #020617;
+  color: white;
+}
+
+.btn-personalizado-relleno {
+  background-color: var(--color-letra-azul);
+  border-color: var(--color-letra-azul);
+  color: white;
+}
+
+
+.btn-personalizado-relleno:hover {
+  background-color: transparent;
+  border-color: var(--color-letra-azul);
+  color: var(--color-letra-azul);
+}
+
+.personalizado-borde{
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-letra-azul);
+}
+
+.hero-section {
+  background-color: var(--color-primario);
+}
+
+.descripcion {
+  text-align: justify;
+}
+
+.textoAzul {
+  color: #5e9bf5;
+}
+
+.textoBlanco{
+  color: white;
+}
+
+section {
+  padding: 80px 6%;
+}
+
+.section-secundaria{
+  background-color: var(--color-secundario);
+}

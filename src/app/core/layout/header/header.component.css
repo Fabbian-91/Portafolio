@@ -1,0 +1,39 @@
+.navbar {
+  background-color: var(--color-secundario);
+  font-family: var(--tipografia-principal);
+  font-weight: 300;
+}
+
+.navbar .nombre {
+  font-weight: 700;
+  color: var(--color-letra-azul);
+  text-shadow: 0 0 10px rgba(21, 87, 178, 1);
+}
+
+.nombre span {
+  color: white;
+}
+
+.tabs .tab {
+  position: relative;
+  color: white;
+}
+
+.tabs .tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-letra-azul);
+  transition: width 0.3s ease;
+}
+
+.tabs .tab:hover {
+  color: var(--color-letra-azul);
+}
+
+.tabs .tab:hover::after {
+  width: 100%;
+}

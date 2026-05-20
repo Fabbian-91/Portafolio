@@ -1,0 +1,12 @@
+.section-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(13, 110, 253, 0.8),
+    transparent
+  );
+  box-shadow: 0 0 12px rgba(13, 110, 253, 0.5);
+  margin: 0;
+}
