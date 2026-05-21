@@ -12,12 +12,16 @@ import {
   CircleDot,
   ExternalLink,
   ArrowDownToLine,
+  ArrowRight,
   Github,
   CircleFadingArrowUp,
   CircleUserRound,
   UserRound,
   Menu,
-  ShieldCheck
+  ShieldCheck,
+  CalendarHeart,
+  CalendarClock,
+  BriefcaseBusiness
 } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
@@ -35,12 +39,16 @@ export const appConfig: ApplicationConfig = {
         CircleDot,
         ExternalLink,
         ArrowDownToLine,
+        ArrowRight,
         Github,
         CircleFadingArrowUp,
         CircleUserRound,
         UserRound,
         Menu,
-        ShieldCheck
+        ShieldCheck,
+        CalendarHeart,
+        CalendarClock,
+        BriefcaseBusiness
       })
     )
   ]

@@ -1,5 +1,5 @@
 <header class="sticky top-0 z-50 bg-black">
-  <div class="navbar bg-base-100 shadow-sm px-4">
+  <div class="navbar bg-base-100 shadow-sm px-4 relative">
 
     <!-- Logo -->
     <div class="navbar-start">
@@ -8,8 +8,8 @@
       </a>
     </div>
 
-    <!-- Menú desktop -->
-    <div class="navbar-center hidden lg:flex">
+    <!-- Menú desktop centrado real -->
+    <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2">
       <div class="tabs tabs-border gap-2 xl:gap-4">
         <a href="#inicio" class="tab text-sm xl:text-base">Inicio</a>
         <a href="#sobreMi" class="tab text-sm xl:text-base">Sobre mí</a>
@@ -19,13 +19,6 @@
         <a href="#activity" class="tab text-sm xl:text-base">Mi actividad</a>
         <a href="#gitHub" class="tab text-sm xl:text-base">GitHub</a>
       </div>
-    </div>
-
-    <!-- Botón desktop -->
-    <div class="navbar-end hidden lg:flex">
-      <a href="#contacto" class="btn btn-personalizado-relleno whitespace-nowrap">
-        Contactarme
-      </a>
     </div>
 
     <!-- Menú móvil / tablet -->
